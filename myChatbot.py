@@ -31,7 +31,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyALSp9jVTV04ziisP5IdFu5-VpPsx39NfU")
+genai.configure(api_key="AIzaSyAKABtUJBZbmA3y_BdHDf0YO38RWc0PvsQ")
 gemini = genai.GenerativeModel('gemini-1.5-flash')
 
 # Load the embedder
