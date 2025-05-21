@@ -31,7 +31,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Configure Gemini API
-genai.configure(api_key="AIzaSyAKABtUJBZbmA3y_BdHDf0YO38RWc0PvsQ")
+genai.configure(api_key="AIzaSyALSp9jVTV04ziisP5IdFu5-VpPsx39NfU")
 gemini = genai.GenerativeModel('gemini-1.5-flash')
 
 # Load the embedder
@@ -57,8 +57,8 @@ def load_data():
 df, faiss_index = load_data()
 
 # Title and instructions
-st.markdown('<h1 class="chat-font">🤖 Sree Chatbot</h1>', unsafe_allow_html=True)
-st.markdown("<h3 class='chat-font'>Ask me anything, and I’ll respond as Sree!</h3>", unsafe_allow_html=True)
+st.markdown('<h1 class="chat-font">🤖 Satvika Chatbot</h1>', unsafe_allow_html=True)
+st.markdown("<h3 class='chat-font'>Ask me anything, and I’ll respond as Satvika!</h3>", unsafe_allow_html=True)
 st.markdown("---")
 
 # Helper functions
@@ -72,7 +72,7 @@ def find_closest_question(query, faiss_index, df):
 def generate_refined_answer(query, retrieved_answer, chat_history):
     chat_context = "\n".join([f"User: {msg['content']}" for msg in chat_history if msg["role"] == "user"][-5:])
     prompt = f"""
-    You are Sree, an AIML student. Reply in a friendly, engaging tone.
+    You are Satvika, an AIML student. Reply in a friendly, engaging tone.
     Chat History:\n{chat_context}
     Current Question: {query}
     Retrieved Answer: {retrieved_answer}
