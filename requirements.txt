@@ -5,5 +5,5 @@ sentence-transformers==2.2.2
 faiss-cpu
 numpy==1.26.0
 scikit-learn==1.3.2
-transformers==4.37.2
-torch>=1.10.0
+torch>=1.10
+transformers>=4.28.0
